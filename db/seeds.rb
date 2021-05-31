@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+kind = Kind.create(name: 'Motivational')
+quote = Quote.create(kind_id: 1, content: "Don't stop when you're tired. Stop when you're done", author: 'Wesley Snipes')
