@@ -16,7 +16,7 @@ class Api::V1::QuotesController < ApplicationController
     def create
         @quote = @kind.quotes.new(quote_params)
         @quote.save 
-        render json: @quote 
+        render json: @kind 
     end 
 
     
