@@ -3,9 +3,8 @@ class Api::V1::QuotesController < ApplicationController
     before_action :set_kind
 
     def index
-        @quotes = @kind.quotes 
+        @quotes = Quote.all
         render json: @quotes
-        
     end
 
     def show
