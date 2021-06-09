@@ -22,10 +22,14 @@ class Api::V1::KindsController < ApplicationController
     def destroy
         @kind = Kind.find(params[:id])
         @kind.destroy 
+        
     end 
 
-    def edit
-
+    def update
+        @kind = Kind.find(params[:id])
+        @kind.update(name: params["kind"]["name"])
+        @kind.save
+        render json: @kind
     end 
 
     private
